@@ -1,0 +1,13 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+// Init scripts
+// Init configuration files
+// fstab
+prebuilt_etc {
+    name: "fstab.monterey",
+    src: "etc/fstab.monterey",
+    vendor: true,
+}

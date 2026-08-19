@@ -1,0 +1,10 @@
+import init.recovery.oculus.rc
+
+on init
+    write /config/usb_gadget/g1/bcdUSB 0x0200
+
+    setprop sys.usb.configfs 1
+
+on fs
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
