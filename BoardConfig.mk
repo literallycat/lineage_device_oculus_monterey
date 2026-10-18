@@ -74,3 +74,8 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Inherit the proprietary files
 include vendor/oculus/monterey/BoardConfigVendor.mk
+
+# Experimental native controller tracking (off unless explicitly enabled).
+ifeq ($(WITH_OPENQUEST_CONTROLLER_TRACKING),true)
+include external/openquest/components/controller_tracking/lineage/BoardConfig.mk
+endif

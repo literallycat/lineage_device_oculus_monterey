@@ -55,3 +55,8 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/oculus/monterey/monterey-vendor.mk)
+
+# Experimental native controller tracking (off unless explicitly enabled).
+ifeq ($(WITH_OPENQUEST_CONTROLLER_TRACKING),true)
+$(call inherit-product, external/openquest/components/controller_tracking/lineage/product.mk)
+endif
